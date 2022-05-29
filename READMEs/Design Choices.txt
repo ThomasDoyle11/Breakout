@@ -1,0 +1,25 @@
+A list of some active design choices for Breakout (some to reduce complication, some for fun):
+
+The client shall only be responsible for Input; all logic shall be performed on the host.
+    This prevents any logic being duplicated.
+   
+The Ball shall only collide with the Paddle when travelling in the negative y direction (downwards), otherwise it shall pass straight through it.
+    This will prevent the second player or a barrier reflecting the Ball, only for it to bounce off the back of the first player.
+    
+The game shall not limit the players lives, but instead count the number of times they 'died'.
+    This allows progress to continue indefinitely whilst still measuring success.
+    
+Wider, Barrier, Faster and Hotball PowerUp effects shall not stack.
+    This will prevent the Paddle becoming too wide, the Balls becoming too fast, and prevents the need to count the number of Hotballs and Barriers.
+
+Multiball PowerUp effect shall stack.
+    This is simple enough and the game can handle multiple balls in play.
+
+Bricks shall be able to reflect Balls in both the X and Y direction at the same time if the Ball enters from the corner.
+    This will allow more gameplay scenarios.
+
+The Paddle shall reflect the Ball symmetrically when the Ball hits the Paddle within a certain range. Outside of this range, the Ball shall be reflected in the direction of the nearest edge of the Paddle at an angle between 0 and the maximum launch angle, interpolated between the threshold and the edge of the Paddle
+    This allows the player to have some control over the movement of the ball and therefore more decision.
+    
+The host shall always launch the ball.
+    This is for ease of design.

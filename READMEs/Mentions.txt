@@ -1,0 +1,5 @@
+All assets are original, excluding:
+
+SFX files, courtesy of Danar Kayfi's 2D Breakout Example Project (https://danarkayfi.wordpress.com/)
+
+The font 'American Captain' by The Foundry (http://www.thefontry.com)
